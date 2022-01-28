@@ -1,0 +1,44 @@
+#navbar > a:hover {
+  background-color: #2B7A78;
+  transform: scale(1);
+  transition: 0.5s all;
+}
+
+#navbar > a{
+  display: block;
+
+  height: 50px;
+  width: 200px;
+
+  text-align: center;
+
+  line-height: 50px;
+
+  background-color: #17252A;
+}
+
+#navbar{
+  display: flex;
+  width: 600px;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+  transition: 0.5s all;
+  transform: scale(0.9);
+
+  text-decoration: underline;
+}
+
+body{
+ background-color: #17252A;
+}
+
+h2{
+  color: #17252A;
+  font-size: 2em;
+}

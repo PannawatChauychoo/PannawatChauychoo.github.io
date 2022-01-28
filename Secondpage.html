@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> Who is Pan? </title>
+    <meta name="description" content="These are my characteristics when I'm with friends vs when I'm working with my classmates on projects. However, I am usually a mix of both and utilize the right characteristics depends on the situation.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="styleshared.css">
+
+    <style>
+
+      #right{
+        width: 50%;
+        height: 800px;
+
+        background-color: gray;
+      }
+
+      #left{
+        width: 50%;
+        height: 800px;
+
+      }
+
+      #body{
+        width: 100%;
+        height: 800px;
+
+        display: flex;
+
+        background-color: #2B7A78;
+      }
+
+
+      #informal {
+        margin: 15%;
+        padding: 10px;
+
+        height: 500px;
+
+        background-color: #75CDD8;
+
+        box-shadow: 2px 3px 5px 0px;
+
+      }
+
+
+      #formal {
+        margin: 15%;
+        padding: 10px;
+
+        height: 500px;
+
+        background-color: #DEF2F1;
+
+        box-shadow: 2px 3px 3px 0px;
+      }
+
+      #golf{
+        height: 320px;
+        width: 470px;
+      }
+
+      .piccon{
+        position: relative;
+        overflow: hidden;
+      }
+
+      .caption1 {
+        background-color: rgba(0, 0, 0, 0.3);
+        position: absolute;
+
+        top: 0px;
+        bottom: 0px;
+        right: 0px;
+        left: 0px;
+
+        text-align: center;
+
+        color: white;
+
+        padding-top: 150px;
+      }
+
+      .caption1{
+        opacity: 0.0;
+        transform: scale(2);
+        transition: all 1s;
+      }
+
+      .piccon:hover .caption1{
+        opacity: 1.0;
+        transform: scale(1);
+      }
+
+      #leader{
+        height: 320px;
+        width: 470px;
+      }
+
+
+
+
+    </style>
+
+  </head>
+  <body>
+
+    <div id="navbar">
+     <a href="homepage(1).html"> Homepage </a>
+     <a href="Secondpage.html"> Informal vs Formal </a>
+     <a href="thirdpage.html"> Projects </a>
+    </div>
+
+    <div id="body">
+      <div id="left">
+        <div id="informal">
+          <h2> As a friend </h2>
+          <ul>
+            <li>Fun and energetic</li>
+            <li>Loves talking about many topics and sharing knowledge</li>
+            <li>Enjoys smaller outings but doesn't shy away from bigger ones</li>
+          </ul>
+
+          <div class="piccon">
+            <img id="golf" src="img(1)/golf.jpeg" alt="Golf">
+            <div class="caption1">
+               Also loves golf!
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div id="right">
+        <div id="formal">
+          <h2> As a professional </h2>
+          <ul>
+            <li>Calm and focused under pressure</li>
+            <li>Loves working in teams of 3-5 as both member and leader</li>
+            <li>Enjoys taking initiatives and empowering members to perform </li>
+          </ul>
+
+          <div class="piccon">
+            <img id="leader" src="img(1)/leader.jpeg" alt="Servant Leadership">
+            <div class="caption1">
+               Team success is top priority
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </body>
+</html>

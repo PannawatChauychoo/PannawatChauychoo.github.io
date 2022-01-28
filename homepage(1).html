@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Welcome! I have created this webplace to showcase my journey in becoming an excellent data analyst. I hope you will be able to learn more about me as a person and beyond just another applicant. ">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title> Personal portfolio </title>
+
+    <link rel="stylesheet" href="styleshared.css">
+
+    <style>
+      #homepage{
+        display: flex;
+        height: 800px;
+        width: 100%;
+
+        background-color: #3AAFA9;
+      }
+
+      #empty{
+        height: 30%;
+        width: 100%;
+        display: block;
+
+        text-align: left;
+        line-height:300px;
+
+        font-size: 3em;
+        color: white;
+
+        margin-left: 10%;
+
+      }
+
+      #introtext {
+        height: 33%;
+        width: 70%;
+
+        text-align: left;
+
+        margin-left: 10%;
+      }
+
+      #goal{
+        width: 400px;
+        text-decoration: underline;
+        color: white;
+
+      }
+
+      #ambition{
+        display: none;
+        padding: 5px;
+        color: #17252A;
+      }
+
+      #goal:hover{
+        color: #AEF2F1;
+
+      }
+
+      #portrait {
+        width: 100%;
+        display: block;
+      }
+
+      #right{
+        width: 50%;
+      }
+
+      #left{
+        width: 50%;
+      }
+
+
+      #homepagepic {
+        padding-top: 100px;
+        height: 600px;
+        width: auto;
+
+        margin-left: 100px;
+      }
+
+
+
+      strong{
+        color: maroon;
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <div id="navbar">
+     <a href="homepage(1).html"> Homepage </a>
+     <a href="Secondpage.html"> Informal vs Formal </a>
+     <a href="thirdpage.html"> Projects </a>
+    </div>
+
+
+    <div id="homepage">
+      <div id="left">
+
+        <div id="portrait">
+          <img id= "homepagepic" src="img(1)/pan.jpeg" alt="Pannawat">
+        </div>
+
+      </div>
+
+      <div id="right">
+        <div id="empty">
+          <h1> Hi there! </h1>
+        </div>
+
+        <div id="introtext">
+          <h2> I am Pannawat Chauychoo </h2>
+          <p> A Business Administration major at <strong> University of Southern California </strong> who loves <strong> solving problems </strong> with people and insights from data. </p>
+          <br> <br> <br>
+          <div id="goal">
+            <h3> "What is your plan for the next few years?" </h3>
+          </div>
+          <div id="ambition">
+            <p> I aim to enjoy college, become a management <strong> consultant </strong> and eventually create a <strong> startup </strong>. Tall tasks but I believe they are <strong> doable </strong>. </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
+    <script>
+      $(document).ready(function(){$("#goal").click(function(){
+      $("#ambition").slideToggle();});});
+    </script>
+
+  </body>
+</html>
