@@ -3,8 +3,8 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
+  workflow_dispatch:   # optional manual trigger
 
 permissions:
   contents: write
@@ -21,14 +21,12 @@ jobs:
 
       - run: npm ci
 
-      - run: |
-          npm run build
-          npm run export
+      - name: Build (static-export)
+        run: npm run build
 
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: gh-pages
           publish_dir: ./out
-          clean: true        # ← wipes old files before copying your fresh build
+          clean: true
