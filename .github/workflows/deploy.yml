@@ -1,34 +1,27 @@
+# .github/workflows/deploy.yml
 name: Deploy to GitHub Pages
 
-# Make sure this is top-level and properly indented (no tabs!)
 on:
   push:
     branches:
-      - main      # <-- or whatever your source branch is named
+      - main
 
 permissions:
-  contents: write  # needed to push to gh-pages
+  contents: write
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-        with:
-          persist-credentials: false  # so the token used below can push
+      - uses: actions/checkout@v3
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
+      - uses: actions/setup-node@v3
         with:
           node-version: '18'
 
-      - name: Install dependencies
-        run: npm ci
+      - run: npm ci
 
-      - name: Build and export
-        run: |
+      - run: |
           npm run build
           npm run export
 
@@ -36,5 +29,6 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./out
           publish_branch: gh-pages
+          publish_dir: ./out
+          clean: true        # ← wipes old files before copying your fresh build
